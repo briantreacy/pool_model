@@ -1,2 +1,4 @@
-# pool_model
-Contains code I wrote for my pool testing PhD project
+# Pool testing as a means of surveillance testing
+
+I embedded a pool-testing mechanism within an $SEIR$ model in order to test pool testing's efficacy at surveillance testing, that is its ability to find infections among the population before enough had accumulated to cause an outbreak. This was inspired by China's ability to test millions of people within two weeks to find a handful of infected in Qingdao. The mechanism was chosen to be as simple as possible: if an infectious person, that is someone from compartment $I$, is present in the pool, then the pool returns a positive result. This kept a handle on the model complexity while also allowing for false negatives as pools with individuals who were infected but not yet infectious (called latent and in compartment $E$) would return a negative result. Individuals continued to mix with the general population while they awaited the results of their pool test. If individuals were in a positive pool, they were then assumed to be 
+
